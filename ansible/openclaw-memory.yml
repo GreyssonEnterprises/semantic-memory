@@ -1,0 +1,116 @@
+---
+# openclaw-memory.yml — Idempotent OpenClaw memory config across Circle Zero PAIs
+#
+# Switches memorySearch.provider from "openai" shim to native "ollama" provider
+# and removes the obsolete remote.baseUrl shim config.
+#
+# Usage:
+#   ansible-playbook -i inventory.yml openclaw-memory.yml
+#   ansible-playbook -i inventory.yml openclaw-memory.yml --limit shale     # single host
+#   ansible-playbook -i inventory.yml openclaw-memory.yml --check           # dry run
+
+- name: Patch OpenClaw memorySearch to native Ollama provider
+  hosts: all
+  gather_facts: false
+  vars_files:
+    - vars/memory-search.yml
+
+  tasks:
+    - name: Verify OpenClaw config exists
+      stat:
+        path: "{{ openclaw_home }}/.openclaw/openclaw.json"
+      register: config_stat
+
+    - name: Fail if config missing
+      fail:
+        msg: "OpenClaw config not found at {{ openclaw_home }}/.openclaw/openclaw.json"
+      when: not config_stat.stat.exists
+
+    - name: Ensure json5 Python package is available
+      pip:
+        name: json5
+        state: present
+        extra_args: "--break-system-packages"
+      become: false
+      ignore_errors: true
+      register: pip_result
+
+    - name: Fallback — install json5 via uv
+      command: uv pip install json5 --system
+      when: pip_result is failed
+      changed_when: true
+
+    - name: Read current memorySearch.provider
+      command: >
+        python3 -c "
+        import json5, json;
+        c = json5.load(open('{{ openclaw_home }}/.openclaw/openclaw.json'));
+        ms = c.get('agents',{}).get('defaults',{}).get('memorySearch',{});
+        print(json.dumps({'provider': ms.get('provider',''), 'has_remote': 'remote' in ms}))
+        "
+      register: current_config
+      changed_when: false
+
+    - name: Parse current config state
+      set_fact:
+        current_state: "{{ current_config.stdout | from_json }}"
+
+    - name: Show current state
+      debug:
+        msg: >
+          {{ pai_name }} ({{ inventory_hostname }}):
+          provider={{ current_state.provider }},
+          has_remote_shim={{ current_state.has_remote }}
+
+    - name: Patch memorySearch config
+      command: >
+        python3 {{ playbook_dir }}/scripts/patch-openclaw-config.py
+        "{{ openclaw_home }}/.openclaw/openclaw.json"
+        '{{ memory_search | to_json }}'
+        --config-path agents.defaults.memorySearch
+        --remove-keys {{ memory_search_remove_keys | join(',') }}
+      register: patch_result
+      changed_when: >
+        current_state.provider != memory_search.provider or
+        current_state.has_remote | bool
+      when: >
+        current_state.provider != memory_search.provider or
+        current_state.has_remote | bool
+
+    - name: Show patch result
+      debug:
+        msg: "{{ patch_result.stdout_lines | default(['No changes needed']) }}"
+
+    - name: Validate config with openclaw CLI
+      command: openclaw config validate
+      register: validate_result
+      changed_when: false
+      failed_when: validate_result.rc != 0
+
+    - name: Show validation result
+      debug:
+        msg: "Config validation: {{ 'PASSED' if validate_result.rc == 0 else 'FAILED' }}"
+
+    - name: Restart OpenClaw gateway
+      command: openclaw gateway restart
+      when: patch_result is changed
+      register: restart_result
+
+    - name: Wait for gateway to come back
+      pause:
+        seconds: 5
+      when: restart_result is changed
+
+    - name: Verify gateway is running
+      command: openclaw gateway status
+      register: status_result
+      changed_when: false
+      when: restart_result is changed
+
+    - name: Summary
+      debug:
+        msg: >
+          ✅ {{ pai_name }} ({{ inventory_hostname }}):
+          memorySearch.provider={{ memory_search.provider }},
+          remote shim removed,
+          gateway {{ 'restarted' if restart_result is changed else 'unchanged' }}

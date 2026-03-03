@@ -1,0 +1,28 @@
+---
+# OpenClaw host inventory — Circle Zero PAI nodes
+# Each host runs an independent OpenClaw gateway with its own config.
+
+all:
+  vars:
+    ollama_url: "http://192.168.1.21:11434"
+    embed_model: "nomic-embed-text"
+    ansible_python_interpreter: auto_silent
+
+  hosts:
+    shale:
+      ansible_host: 192.168.1.25
+      ansible_user: shalegreysson
+      openclaw_home: "/Users/shalegreysson"
+      pai_name: Patterson
+
+    studio:
+      ansible_host: 192.168.1.22
+      ansible_user: grimm
+      openclaw_home: "/Users/grimm"
+      pai_name: Bob
+
+    caroline:
+      ansible_host: caroline
+      ansible_user: jackie
+      openclaw_home: "/Users/jackie"
+      pai_name: Dean
