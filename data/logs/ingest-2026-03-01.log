@@ -1,0 +1,51 @@
+[18:02:32] === Incremental ingest starting ===
+[18:02:32] Pulling Patterson sessions from shale...
+[18:02:33] Pulling Dean sessions from caroline...
+[18:02:33] Ingesting Bob sessions...
+[18:02:44] Ingesting Patterson sessions...
+[18:02:46] Ingesting Dean sessions...
+[18:02:48] Syncing Patterson store to shale...
+[18:02:49] Syncing Dean store to caroline...
+[18:02:50] Backing up stores to NAS...
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/." failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob" failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/19ddc693-e43a-4509-9d66-7e9abbc7b6ce" failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/67290925-8c12-4de9-9626-8482a3601084" failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean" failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/5411df6d-a0a8-4c8f-8a0a-f255aa9f4af2" failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/c31e265b-3181-4ea1-b5a1-24d1556e7c93" failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson" failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/6967f28b-8eb1-41ce-92d8-2ab630cb9363" failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/f9a2c7b8-63fc-4b91-99a6-89eb7ea3e748" failed: Operation not permitted (1)
+rsync: [generator] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/shared" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/.chroma.sqlite3.Nqe2zp" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/19ddc693-e43a-4509-9d66-7e9abbc7b6ce/.data_level0.bin.fWt8dn" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/19ddc693-e43a-4509-9d66-7e9abbc7b6ce/.header.bin.oAuLmG" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/19ddc693-e43a-4509-9d66-7e9abbc7b6ce/.length.bin.ipkU6g" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/19ddc693-e43a-4509-9d66-7e9abbc7b6ce/.link_lists.bin.8C544L" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/67290925-8c12-4de9-9626-8482a3601084/.data_level0.bin.x7U0Y4" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/67290925-8c12-4de9-9626-8482a3601084/.header.bin.DX4wBd" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/67290925-8c12-4de9-9626-8482a3601084/.index_metadata.pickle.7Mz9bp" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/67290925-8c12-4de9-9626-8482a3601084/.length.bin.6LSHg9" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/bob/67290925-8c12-4de9-9626-8482a3601084/.link_lists.bin.J7JskW" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/.chroma.sqlite3.uzjrWB" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/5411df6d-a0a8-4c8f-8a0a-f255aa9f4af2/.data_level0.bin.podpWa" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/5411df6d-a0a8-4c8f-8a0a-f255aa9f4af2/.header.bin.cQdhCW" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/5411df6d-a0a8-4c8f-8a0a-f255aa9f4af2/.length.bin.Xkmawz" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/5411df6d-a0a8-4c8f-8a0a-f255aa9f4af2/.link_lists.bin.YLJ13B" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/c31e265b-3181-4ea1-b5a1-24d1556e7c93/.data_level0.bin.1dhGnq" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/c31e265b-3181-4ea1-b5a1-24d1556e7c93/.header.bin.E4kGr6" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/c31e265b-3181-4ea1-b5a1-24d1556e7c93/.length.bin.LAcp6J" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/dean/c31e265b-3181-4ea1-b5a1-24d1556e7c93/.link_lists.bin.rcq2NM" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/.chroma.sqlite3.lMNzWp" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/6967f28b-8eb1-41ce-92d8-2ab630cb9363/.data_level0.bin.LMGzJ0" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/6967f28b-8eb1-41ce-92d8-2ab630cb9363/.header.bin.7yx9jN" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/6967f28b-8eb1-41ce-92d8-2ab630cb9363/.length.bin.5lWvuR" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/6967f28b-8eb1-41ce-92d8-2ab630cb9363/.link_lists.bin.5RNJMY" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/f9a2c7b8-63fc-4b91-99a6-89eb7ea3e748/.data_level0.bin.t3qA41" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/f9a2c7b8-63fc-4b91-99a6-89eb7ea3e748/.header.bin.mYt5Cj" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/f9a2c7b8-63fc-4b91-99a6-89eb7ea3e748/.length.bin.rQ6r6w" failed: Operation not permitted (1)
+rsync: [receiver] chgrp "/Volumes/public/projects/business/warehouse/semantic-memory-cross-agent/data/vectors-backup/patterson/f9a2c7b8-63fc-4b91-99a6-89eb7ea3e748/.link_lists.bin.oRjCjX" failed: Operation not permitted (1)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1358) [sender=3.4.1]
+[18:02:56] WARNING: NAS backup failed
+[18:03:01] === Ingest complete. Segments: bob=1713, patterson=199, dean=152 ===

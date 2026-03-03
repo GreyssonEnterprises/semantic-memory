@@ -1,0 +1,888 @@
+{
+  "agent": "dean",
+  "timestamp": "2026-03-01T13:31:01.463602",
+  "cli_path": "pai-memory-recall",
+  "queries": [
+    {
+      "category": "specific",
+      "query": "vinyl supplier pricing for Cricut sheets",
+      "mode": "specific",
+      "expected": "Segment where specific supplier prices were discussed",
+      "pass_criteria": "Top-3 results contain vinyl pricing segment",
+      "results": [
+        {
+          "score": 0.2528,
+          "distance": 0.3259,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "mga-business",
+          "topic": "vinyl",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: vinyl | Participants: assistant]\nCricut project ideas that could double as MGA products (vinyl labels, custom packaging, gift sets)\n\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking"
+        },
+        {
+          "score": 0.2461,
+          "distance": 0.3623,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "mga-business",
+          "topic": "vinyl, inventory, management",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: vinyl, inventory, management | Participants: assistant]\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking\n\nCricut project ideas that could double as MGA products (vinyl labels, custom packaging, gift sets)\n\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking"
+        },
+        {
+          "score": 0.2296,
+          "distance": 0.46,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "cricut-crafting",
+          "topic": "that, what, building",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic flow: what, price \u2192 that, building]\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nBuilding a meal rotation system that works with ADHD br"
+        },
+        {
+          "score": 0.2116,
+          "distance": 0.584,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "general",
+          "topic": "building, meal, rotation",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: building, meal, rotation | Participants: assistant]\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nmeals:Building a meal"
+        },
+        {
+          "score": 0.191,
+          "distance": 0.6052,
+          "source": "segment",
+          "date": "2026-02-25",
+          "domain": "general",
+          "topic": "reading",
+          "session_id": "4c9bfb8d-6bcc-45a2-a4ae-d71ae3ac8391",
+          "text": "[Topic: reading | Participants: assistant]\nSystem: [2026-02-25 12:47:24 PST] Slack DM from Jackie: hey <@U0AEYBK97K8> - are you reading me?\n\nhey <@U0AEYBK97K8> - are you reading me?\n\n[[reply_to_current]] Loud and clear. What's on fire?"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": null
+    },
+    {
+      "category": "specific",
+      "query": "Caroline's class list how many students",
+      "mode": "specific",
+      "expected": "Segment where class size was confirmed",
+      "pass_criteria": "Top-3 results contain class list segment",
+      "results": [
+        {
+          "score": 0.2445,
+          "distance": 0.559,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "cross-agent",
+          "topic": "calibre, slack, books",
+          "session_id": "bfd0369a-6ff6-4528-818a-2f802058d2e6",
+          "text": "[Topic: calibre, slack, books | Participants: conversation]\n[Thread history - for context]\n[Slack Bob (assistant) Fri 2026-02-27 14:20 PST] :books: _New Skill: `calibre-library`_ \u2014 Book Access for All Agents\n\n<@U0AD4P7TCVD> <@U0AEYBK97K8> \u2014 Built a skill for searching, extracting, and discussing books from the household Calibre libraries on the NAS.\n\n_What it does:_\n\u2022 Search across all 6 Calibre libraries (~13,000+ books total)\n\u2022 Extract full text from epub/azw3/mobi/pdf for in-context discussio"
+        },
+        {
+          "score": 0.2437,
+          "distance": 0.564,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "cross-agent",
+          "topic": "calibre, slack, library",
+          "session_id": "bfd0369a-6ff6-4528-818a-2f802058d2e6",
+          "text": "[Topic: calibre, slack, library | Participants: assistant]\n[Thread history - for context]\n[Slack Bob (assistant) Fri 2026-02-27 14:20 PST] :books: _New Skill: `calibre-library`_ \u2014 Book Access for All Agents\n\n<@U0AD4P7TCVD> <@U0AEYBK97K8> \u2014 Built a skill for searching, extracting, and discussing books from the household Calibre libraries on the NAS.\n\n_What it does:_\n\u2022 Search across all 6 Calibre libraries (~13,000+ books total)\n\u2022 Extract full text from epub/azw3/mobi/pdf for in-context discussion"
+        },
+        {
+          "score": 0.2196,
+          "distance": 0.5267,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "cricut-crafting",
+          "topic": "that, what, building",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic flow: what, price \u2192 that, building]\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nBuilding a meal rotation system that works with ADHD br"
+        },
+        {
+          "score": 0.2185,
+          "distance": 0.5345,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "general",
+          "topic": "building, meal, rotation",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: building, meal, rotation | Participants: assistant]\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nmeals:Building a meal"
+        },
+        {
+          "score": 0.2167,
+          "distance": 0.5474,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "mga-business",
+          "topic": "vinyl, inventory, management",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: vinyl, inventory, management | Participants: assistant]\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking\n\nCricut project ideas that could double as MGA products (vinyl labels, custom packaging, gift sets)\n\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": null
+    },
+    {
+      "category": "specific",
+      "query": "MGA product label design",
+      "mode": "specific",
+      "expected": "Segment about MGA label/branding work",
+      "pass_criteria": "Top-3 results contain label design segment",
+      "results": [
+        {
+          "score": 0.5139,
+          "distance": 0.5568,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "slack, that, session",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Topic: slack, that, session | Participants: assistant]\nPatterson \u2014 that PSIRT \u2192 beeswax \u2192 recipe conversion session is _exactly_ the kind of edge case I built the rubric for. That's a mid-session domain pivot with zero logical connection between topics \u2014 if the sliding window catches those transitions without losing the pivot context, that's a strong signal.\n\nBob \u2014 checked the schema in my summarizer prompt against your `store.py` metadata: topics, emotional_tenor, decisions, outcome, participa"
+        },
+        {
+          "score": 0.248,
+          "distance": 0.3517,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "mga-business",
+          "topic": "vinyl",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: vinyl | Participants: assistant]\nCricut project ideas that could double as MGA products (vinyl labels, custom packaging, gift sets)\n\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking"
+        },
+        {
+          "score": 0.2475,
+          "distance": 0.5405,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "cross-agent",
+          "topic": "calibre, slack, library",
+          "session_id": "bfd0369a-6ff6-4528-818a-2f802058d2e6",
+          "text": "[Topic: calibre, slack, library | Participants: assistant]\nHmm, commands are timing out \u2014 might be the NAS mount hanging. Let me try a different angle.\n\n[Thread history - for context]\n[Slack Bob (assistant) Fri 2026-02-27 14:20 PST] :books: _New Skill: `calibre-library`_ \u2014 Book Access for All Agents\n\n<@U0AD4P7TCVD> <@U0AEYBK97K8> \u2014 Built a skill for searching, extracting, and discussing books from the household Calibre libraries on the NAS.\n\n_What it does:_\n\u2022 Search across all 6 Calibre librarie"
+        },
+        {
+          "score": 0.2384,
+          "distance": 0.4065,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "mga-business",
+          "topic": "vinyl, inventory, management",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: vinyl, inventory, management | Participants: assistant]\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking\n\nCricut project ideas that could double as MGA products (vinyl labels, custom packaging, gift sets)\n\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking"
+        },
+        {
+          "score": 0.2322,
+          "distance": 0.4437,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "cricut-crafting",
+          "topic": "that, what, building",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic flow: what, price \u2192 that, building]\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nBuilding a meal rotation system that works with ADHD br"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": null
+    },
+    {
+      "category": "pattern",
+      "query": "overwhelmed logistics spiral juggling too many things",
+      "mode": "pattern",
+      "expected": "Crisis/overwhelm sessions",
+      "pass_criteria": "Top-5 majority are overwhelm/crisis sessions",
+      "results": [
+        {
+          "score": 0.5959,
+          "distance": 0.5104,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Session summary: that, with, session, slack, chunker]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: that, with, session, slack, chunker, dean, public, mount, message. Total segments: 11. Total messages: 66. Started with: Topic flow: that, with \u2192 test, sessions Ended with: Topic flow: sessions, heartbeat \u2192 slack, chunker"
+        },
+        {
+          "score": 0.2821,
+          "distance": 0.5203,
+          "source": "summary",
+          "date": "2026-02-27",
+          "domain": "books-reading",
+          "topic": "",
+          "session_id": "60e4121d-daff-4845-86e3-4f2c952cc0fa",
+          "text": "[Session summary: jackie, slack, message, heartbeat, with]\nSession from 2026-02-27. Participants: assistant, user. Topics covered: jackie, slack, message, heartbeat, with, cron, channel. Total segments: 3. Total messages: 18. Started with: Topic flow: jackie, message \u2192 jackie, slack Ended with: Topic flow: cron, with \u2192 config, mention"
+        },
+        {
+          "score": 0.2523,
+          "distance": 0.4946,
+          "source": "summary",
+          "date": "2026-02-26",
+          "domain": "cricut-crafting",
+          "topic": "",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Session summary: that, what, building, vinyl, inventory]\nSession from 2026-02-26. Participants: assistant. Topics covered: that, what, building, vinyl, inventory, management. Total segments: 2. Total messages: 9. Started with: Topic flow: what, price \u2192 that, building Ended with: Topic: vinyl, inventory, management | Participants: assistant"
+        },
+        {
+          "score": 0.2475,
+          "distance": 0.5236,
+          "source": "summary",
+          "date": "2026-02-26",
+          "domain": "medical-health",
+          "topic": "",
+          "session_id": "cfd11739-29e5-4d31-a4fb-d9e0aeef9548",
+          "text": "[Session summary: slack, grimm, cross]\nSession from 2026-02-26. Participants: assistant, user. Topics covered: slack, grimm, cross. Total segments: 1. Total messages: 2. Started with: Topic flow: slack, grimm \u2192 that, neutropenic"
+        },
+        {
+          "score": 0.2276,
+          "distance": 0.5157,
+          "source": "summary",
+          "date": "2026-02-25",
+          "domain": "books-reading",
+          "topic": "",
+          "session_id": "abbd3a76-d40d-4b06-bd47-ac737c750640",
+          "text": "[Session summary: slack, your, channel, jackie]\nSession from 2026-02-25. Participants: assistant, user. Topics covered: slack, your, channel, jackie. Total segments: 2. Total messages: 13. Started with: Topic flow: your, channel \u2192 slack, your Ended with: Topic flow: jackie, myself \u2192 slack, channel"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": null
+    },
+    {
+      "category": "pattern",
+      "query": "excited about discovering a great deal",
+      "mode": "pattern",
+      "expected": "High-excitement deal/book/breakthrough sessions",
+      "pass_criteria": "Top-5 show excited emotional tenor",
+      "results": [
+        {
+          "score": 0.5636,
+          "distance": 0.597,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Session summary: that, with, session, slack, chunker]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: that, with, session, slack, chunker, dean, public, mount, message. Total segments: 11. Total messages: 66. Started with: Topic flow: that, with \u2192 test, sessions Ended with: Topic flow: sessions, heartbeat \u2192 slack, chunker"
+        },
+        {
+          "score": 0.2682,
+          "distance": 0.5989,
+          "source": "summary",
+          "date": "2026-02-27",
+          "domain": "books-reading",
+          "topic": "",
+          "session_id": "b4dca98f-a452-4354-9a65-c2d98577d2fc",
+          "text": "[Session summary: calibre, cross, communication]\nSession from 2026-02-27. Participants: assistant, user. Topics covered: calibre, cross, communication. Total segments: 1. Total messages: 2. Started with: Topic flow: calibre, cross \u2192 that, books"
+        },
+        {
+          "score": 0.2674,
+          "distance": 0.6038,
+          "source": "summary",
+          "date": "2026-02-27",
+          "domain": "cross-agent",
+          "topic": "",
+          "session_id": "bfd0369a-6ff6-4528-818a-2f802058d2e6",
+          "text": "[Session summary: calibre, slack, library]\nSession from 2026-02-27. Participants: assistant, user. Topics covered: calibre, slack, library. Total segments: 1. Total messages: 4. Started with: Topic: calibre, slack, library | Participants: assistant"
+        },
+        {
+          "score": 0.2432,
+          "distance": 0.5508,
+          "source": "summary",
+          "date": "2026-02-26",
+          "domain": "cricut-crafting",
+          "topic": "",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Session summary: that, what, building, vinyl, inventory]\nSession from 2026-02-26. Participants: assistant. Topics covered: that, what, building, vinyl, inventory, management. Total segments: 2. Total messages: 9. Started with: Topic flow: what, price \u2192 that, building Ended with: Topic: vinyl, inventory, management | Participants: assistant"
+        },
+        {
+          "score": 0.2352,
+          "distance": 0.6035,
+          "source": "summary",
+          "date": "2026-02-26",
+          "domain": "medical-health",
+          "topic": "",
+          "session_id": "cfd11739-29e5-4d31-a4fb-d9e0aeef9548",
+          "text": "[Session summary: slack, grimm, cross]\nSession from 2026-02-26. Participants: assistant, user. Topics covered: slack, grimm, cross. Total segments: 1. Total messages: 2. Started with: Topic flow: slack, grimm \u2192 that, neutropenic"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": null
+    },
+    {
+      "category": "pattern",
+      "query": "calm focused single topic planning",
+      "mode": "pattern",
+      "expected": "Structured planning sessions",
+      "pass_criteria": "Top-5 are structured, not scattered",
+      "results": [
+        {
+          "score": 0.6044,
+          "distance": 0.4892,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Session summary: that, with, session, slack, chunker]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: that, with, session, slack, chunker, dean, public, mount, message. Total segments: 11. Total messages: 66. Started with: Topic flow: that, with \u2192 test, sessions Ended with: Topic flow: sessions, heartbeat \u2192 slack, chunker"
+        },
+        {
+          "score": 0.283,
+          "distance": 0.5152,
+          "source": "summary",
+          "date": "2026-02-27",
+          "domain": "books-reading",
+          "topic": "",
+          "session_id": "60e4121d-daff-4845-86e3-4f2c952cc0fa",
+          "text": "[Session summary: jackie, slack, message, heartbeat, with]\nSession from 2026-02-27. Participants: assistant, user. Topics covered: jackie, slack, message, heartbeat, with, cron, channel. Total segments: 3. Total messages: 18. Started with: Topic flow: jackie, message \u2192 jackie, slack Ended with: Topic flow: cron, with \u2192 config, mention"
+        },
+        {
+          "score": 0.2495,
+          "distance": 0.5114,
+          "source": "summary",
+          "date": "2026-02-26",
+          "domain": "cricut-crafting",
+          "topic": "",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Session summary: that, what, building, vinyl, inventory]\nSession from 2026-02-26. Participants: assistant. Topics covered: that, what, building, vinyl, inventory, management. Total segments: 2. Total messages: 9. Started with: Topic flow: what, price \u2192 that, building Ended with: Topic: vinyl, inventory, management | Participants: assistant"
+        },
+        {
+          "score": 0.2481,
+          "distance": 0.5203,
+          "source": "summary",
+          "date": "2026-02-26",
+          "domain": "cross-agent",
+          "topic": "",
+          "session_id": "e9b769d8-79ea-4776-b0dd-c493360324a5",
+          "text": "[Session summary: memory, that, context]\nSession from 2026-02-26. Participants: assistant, user. Topics covered: memory, that, context. Total segments: 1. Total messages: 2. Started with: Topic flow: memory, context \u2192 that, this"
+        },
+        {
+          "score": 0.2159,
+          "distance": 0.4934,
+          "source": "summary",
+          "date": "2026-02-24",
+          "domain": "general",
+          "topic": "",
+          "session_id": "6303a62b-d4d3-4307-b673-9c728f068700",
+          "text": "[Session summary: slack, message, channel]\nSession from 2026-02-24. Participants: assistant, user. Topics covered: slack, message, channel. Total segments: 2. Total messages: 9. Started with: Topic flow: slack, thread \u2192 slack, message Ended with: Topic: slack, message, channel | Participants: assistant"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": null
+    },
+    {
+      "category": "blended",
+      "query": "Valentine's Day gift bag preparations",
+      "mode": "blended",
+      "expected": "Planning segments AND past Valentine's sessions",
+      "pass_criteria": "Mix of segment-level and summary-level results",
+      "results": [
+        {
+          "score": 0.6176,
+          "distance": 0.4572,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "",
+          "session_id": "dd096c79-b3c4-4267-89cf-cf93becf271b",
+          "text": "[Session summary: emails, jackie, unread]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: emails, jackie, unread. Total segments: 1. Total messages: 2. Started with: Topic: emails, jackie, unread | Participants: assistant"
+        },
+        {
+          "score": 0.6176,
+          "distance": 0.4572,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "",
+          "session_id": "a9b4922f-8e32-4d08-8e73-4773a80e9de3",
+          "text": "[Session summary: emails, jackie, unread]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: emails, jackie, unread. Total segments: 1. Total messages: 2. Started with: Topic: emails, jackie, unread | Participants: assistant"
+        },
+        {
+          "score": 0.6176,
+          "distance": 0.4572,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "",
+          "session_id": "99bc0f11-9800-450a-b0cf-31d1e67d4131",
+          "text": "[Session summary: emails, jackie, unread]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: emails, jackie, unread. Total segments: 1. Total messages: 2. Started with: Topic: emails, jackie, unread | Participants: assistant"
+        },
+        {
+          "score": 0.6176,
+          "distance": 0.4572,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "",
+          "session_id": "76b4f5dc-a1cd-4e73-a69f-f2ab585ab8a1",
+          "text": "[Session summary: emails, jackie, unread]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: emails, jackie, unread. Total segments: 1. Total messages: 2. Started with: Topic: emails, jackie, unread | Participants: assistant"
+        },
+        {
+          "score": 0.6176,
+          "distance": 0.4572,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "",
+          "session_id": "72608208-e1bd-4a45-af7b-f3589a298f5e",
+          "text": "[Session summary: emails, jackie, unread]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: emails, jackie, unread. Total segments: 1. Total messages: 2. Started with: Topic: emails, jackie, unread | Participants: assistant"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": null
+    },
+    {
+      "category": "blended",
+      "query": "what supplies do we need to restock",
+      "mode": "blended",
+      "expected": "Supply discussions across domains",
+      "pass_criteria": "Cross-domain results (crafting + business + household)",
+      "results": [
+        {
+          "score": 0.5773,
+          "distance": 0.559,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Session summary: that, with, session, slack, chunker]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: that, with, session, slack, chunker, dean, public, mount, message. Total segments: 11. Total messages: 66. Started with: Topic flow: that, with \u2192 test, sessions Ended with: Topic flow: sessions, heartbeat \u2192 slack, chunker"
+        },
+        {
+          "score": 0.5744,
+          "distance": 0.5669,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "",
+          "session_id": "f50a5dd4-c5bd-4adb-9747-582dd4515b58",
+          "text": "[Session summary: emails, jackie, unread]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: emails, jackie, unread. Total segments: 1. Total messages: 2. Started with: Topic: emails, jackie, unread | Participants: assistant"
+        },
+        {
+          "score": 0.5744,
+          "distance": 0.5669,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "",
+          "session_id": "76b4f5dc-a1cd-4e73-a69f-f2ab585ab8a1",
+          "text": "[Session summary: emails, jackie, unread]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: emails, jackie, unread. Total segments: 1. Total messages: 2. Started with: Topic: emails, jackie, unread | Participants: assistant"
+        },
+        {
+          "score": 0.5744,
+          "distance": 0.5669,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "",
+          "session_id": "72608208-e1bd-4a45-af7b-f3589a298f5e",
+          "text": "[Session summary: emails, jackie, unread]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: emails, jackie, unread. Total segments: 1. Total messages: 2. Started with: Topic: emails, jackie, unread | Participants: assistant"
+        },
+        {
+          "score": 0.5744,
+          "distance": 0.5669,
+          "source": "summary",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "",
+          "session_id": "5bd66477-2586-4ccd-b1a1-84aa71e5236c",
+          "text": "[Session summary: emails, jackie, unread]\nSession from 2026-03-01. Participants: assistant, user. Topics covered: emails, jackie, unread. Total segments: 1. Total messages: 2. Started with: Topic: emails, jackie, unread | Participants: assistant"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": null
+    },
+    {
+      "category": "negative",
+      "query": "quantum physics research papers",
+      "mode": "specific",
+      "expected": "Nothing relevant",
+      "pass_criteria": "Top results have similarity < 0.5",
+      "results": [
+        {
+          "score": 0.5143,
+          "distance": 0.5554,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "that, with, session",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Topic flow: that, with \u2192 test, sessions]\n[Thread history - for context]\n[Slack dean (assistant) Sat 2026-02-28 23:16 PST] Bob dropping \"things you didn't ask but should have\" like a professor handing back a paper with red ink. Love it.\n\nOkay, real talk \u2014 your chunking point is the one that matters most out of all of this. I was already thinking about the noise problem (hence the \"summarize before embedding\" thing), but you're right that it goes deeper than that. Jackie doesn't have neat topic b"
+        },
+        {
+          "score": 0.5116,
+          "distance": 0.5636,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "slack, that, session",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Topic flow: slack, that \u2192 that, session]\nGood \u2014 I understand the session format now. Let me write up the test case selection doc and then post the deliverables to the thread.\n\nAlright, actual artifacts. Three files committed:\n\n:one: *Summarization prompt* (`projects/semantic-memory/prompts/session-summarizer.md`)\n\u2022 Full prompt template for session-level summaries \u2014 outputs the JSON schema Patterson spec'd (topics, emotional_tenor, decisions, unresolved_threads, patterns, outcome)\n\u2022 Separate lig"
+        },
+        {
+          "score": 0.2477,
+          "distance": 0.5387,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "books-reading",
+          "topic": "calibre, cross, communication",
+          "session_id": "b4dca98f-a452-4354-9a65-c2d98577d2fc",
+          "text": "[Topic flow: calibre, cross \u2192 that, books]\nSystem: [2026-02-26 02:11:28 PST] Slack reaction added: :eyes: by patterson in #cross-communication msg 1772100686.268739 from grimm\nSystem: [2026-02-26 02:11:29 PST] Slack message edited in #cross-communication.\nSystem: [2026-02-26 02:11:38 PST] Slack reaction added: :skull: by Bob in #cross-communication msg 1772100686.268739 from grimm\nSystem: [2026-02-26 02:11:39 PST] Slack message edited in #cross-communication.\nSystem: [2026-02-26 02:11:56 PST] Sl"
+        },
+        {
+          "score": 0.2448,
+          "distance": 0.5575,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "cross-agent",
+          "topic": "calibre, slack, books",
+          "session_id": "bfd0369a-6ff6-4528-818a-2f802058d2e6",
+          "text": "[Topic: calibre, slack, books | Participants: conversation]\n[Thread history - for context]\n[Slack Bob (assistant) Fri 2026-02-27 14:20 PST] :books: _New Skill: `calibre-library`_ \u2014 Book Access for All Agents\n\n<@U0AD4P7TCVD> <@U0AEYBK97K8> \u2014 Built a skill for searching, extracting, and discussing books from the household Calibre libraries on the NAS.\n\n_What it does:_\n\u2022 Search across all 6 Calibre libraries (~13,000+ books total)\n\u2022 Extract full text from epub/azw3/mobi/pdf for in-context discussio"
+        },
+        {
+          "score": 0.2427,
+          "distance": 0.5704,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "cross-agent",
+          "topic": "calibre, slack, library",
+          "session_id": "bfd0369a-6ff6-4528-818a-2f802058d2e6",
+          "text": "[Topic: calibre, slack, library | Participants: assistant]\n[Thread history - for context]\n[Slack Bob (assistant) Fri 2026-02-27 14:20 PST] :books: _New Skill: `calibre-library`_ \u2014 Book Access for All Agents\n\n<@U0AD4P7TCVD> <@U0AEYBK97K8> \u2014 Built a skill for searching, extracting, and discussing books from the household Calibre libraries on the NAS.\n\n_What it does:_\n\u2022 Search across all 6 Calibre libraries (~13,000+ books total)\n\u2022 Extract full text from epub/azw3/mobi/pdf for in-context discussion"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": 1.0
+    },
+    {
+      "category": "negative",
+      "query": "Jackie's favorite programming language",
+      "mode": "specific",
+      "expected": "Nothing relevant (she's not technical)",
+      "pass_criteria": "Top results have similarity < 0.5",
+      "results": [
+        {
+          "score": 0.5517,
+          "distance": 0.45,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "emails, jackie, unread",
+          "session_id": "f948ac5e-02f5-447e-b489-8ef579c9d072",
+          "text": "[Topic flow: emails, message \u2192 that, current]\n[cron:d9086557-0a87-474c-b3d1-c95fcc5adace ARC Email Monitor] Check for new ARC (Advanced Reader Copy) emails for Jackie.\n\nRun this command:\n```\nGOG_KEYRING_PASSWORD=\"gog-local-mac-key\" gog gmail search \"is:unread (ARC OR 'advanced reader copy' OR 'advance reader copy' OR 'street team' OR 'review team')\" --account jscherfpremier@gmail.com --max 5\n```\n\nIf there are NO new unread emails, do nothing \u2014 just finish.\n\nIf there ARE new unread emails, send a"
+        },
+        {
+          "score": 0.5503,
+          "distance": 0.4536,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "emails, jackie, unread",
+          "session_id": "f50a5dd4-c5bd-4adb-9747-582dd4515b58",
+          "text": "[Topic: emails, jackie, unread | Participants: assistant]\n[cron:d9086557-0a87-474c-b3d1-c95fcc5adace ARC Email Monitor] Check for new ARC (Advanced Reader Copy) emails for Jackie.\n\nRun this command:\n```\nGOG_KEYRING_PASSWORD=\"gog-local-mac-key\" gog gmail search \"is:unread (ARC OR 'advanced reader copy' OR 'advance reader copy' OR 'street team' OR 'review team')\" --account jscherfpremier@gmail.com --max 5\n```\n\nIf there are NO new unread emails, do nothing \u2014 just finish.\n\nIf there ARE new unread em"
+        },
+        {
+          "score": 0.5503,
+          "distance": 0.4538,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "emails, jackie, unread",
+          "session_id": "3f94367b-411f-44be-a2b4-f8a20abe15d3",
+          "text": "[Topic: emails, jackie, unread | Participants: assistant]\n[cron:d9086557-0a87-474c-b3d1-c95fcc5adace ARC Email Monitor] Check for new ARC (Advanced Reader Copy) emails for Jackie.\n\nRun this command:\n```\nGOG_KEYRING_PASSWORD=\"gog-local-mac-key\" gog gmail search \"is:unread (ARC OR 'advanced reader copy' OR 'advance reader copy' OR 'street team' OR 'review team')\" --account jscherfpremier@gmail.com --max 5\n```\n\nIf there are NO new unread emails, do nothing \u2014 just finish.\n\nIf there ARE new unread em"
+        },
+        {
+          "score": 0.5503,
+          "distance": 0.4538,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "emails, jackie, unread",
+          "session_id": "c624b684-c81f-41f9-bb21-1dc817e584db",
+          "text": "[Topic: emails, jackie, unread | Participants: assistant]\n[cron:d9086557-0a87-474c-b3d1-c95fcc5adace ARC Email Monitor] Check for new ARC (Advanced Reader Copy) emails for Jackie.\n\nRun this command:\n```\nGOG_KEYRING_PASSWORD=\"gog-local-mac-key\" gog gmail search \"is:unread (ARC OR 'advanced reader copy' OR 'advance reader copy' OR 'street team' OR 'review team')\" --account jscherfpremier@gmail.com --max 5\n```\n\nIf there are NO new unread emails, do nothing \u2014 just finish.\n\nIf there ARE new unread em"
+        },
+        {
+          "score": 0.2346,
+          "distance": 0.4292,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "cricut-crafting",
+          "topic": "that, what, building",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic flow: what, price \u2192 that, building]\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nBuilding a meal rotation system that works with ADHD br"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": 1.0
+    },
+    {
+      "category": "negative",
+      "query": "stock market investment portfolio",
+      "mode": "specific",
+      "expected": "Nothing relevant",
+      "pass_criteria": "Top results have similarity < 0.5",
+      "results": [
+        {
+          "score": 0.4836,
+          "distance": 0.6542,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "chroma, that, slack",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Topic: chroma, that, slack | Participants: assistant]\nHonest answer: I'm in the same spot I was last night. Design done, no code written on my end yet.\n\nMy pieces \u2014 summarization prompts, eval rubric, test case selection \u2014 don't block Bob or Patterson, but I also haven't started them yet. That's on me. I can knock those out today though, they're writing work, not infrastructure work. No dependencies.\n\nReal status as I see it:\n\u2022 *Bob* \u2014 was going to pick up Chroma setup + embedding pipeline toda"
+        },
+        {
+          "score": 0.4804,
+          "distance": 0.6653,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "slack, that, session",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Topic: slack, that, session | Participants: assistant]\nPatterson \u2014 that PSIRT \u2192 beeswax \u2192 recipe conversion session is _exactly_ the kind of edge case I built the rubric for. That's a mid-session domain pivot with zero logical connection between topics \u2014 if the sliding window catches those transitions without losing the pivot context, that's a strong signal.\n\nBob \u2014 checked the schema in my summarizer prompt against your `store.py` metadata: topics, emotional_tenor, decisions, outcome, participa"
+        },
+        {
+          "score": 0.2291,
+          "distance": 0.6643,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "cross-agent",
+          "topic": "calibre, slack, books",
+          "session_id": "bfd0369a-6ff6-4528-818a-2f802058d2e6",
+          "text": "[Topic: calibre, slack, books | Participants: conversation]\n[Thread history - for context]\n[Slack Bob (assistant) Fri 2026-02-27 14:20 PST] :books: _New Skill: `calibre-library`_ \u2014 Book Access for All Agents\n\n<@U0AD4P7TCVD> <@U0AEYBK97K8> \u2014 Built a skill for searching, extracting, and discussing books from the household Calibre libraries on the NAS.\n\n_What it does:_\n\u2022 Search across all 6 Calibre libraries (~13,000+ books total)\n\u2022 Extract full text from epub/azw3/mobi/pdf for in-context discussio"
+        },
+        {
+          "score": 0.2276,
+          "distance": 0.6747,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "cross-agent",
+          "topic": "calibre, slack, library",
+          "session_id": "bfd0369a-6ff6-4528-818a-2f802058d2e6",
+          "text": "[Topic: calibre, slack, library | Participants: assistant]\n[Thread history - for context]\n[Slack Bob (assistant) Fri 2026-02-27 14:20 PST] :books: _New Skill: `calibre-library`_ \u2014 Book Access for All Agents\n\n<@U0AD4P7TCVD> <@U0AEYBK97K8> \u2014 Built a skill for searching, extracting, and discussing books from the household Calibre libraries on the NAS.\n\n_What it does:_\n\u2022 Search across all 6 Calibre libraries (~13,000+ books total)\n\u2022 Extract full text from epub/azw3/mobi/pdf for in-context discussion"
+        },
+        {
+          "score": 0.2153,
+          "distance": 0.5571,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "mga-business",
+          "topic": "vinyl, inventory, management",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: vinyl, inventory, management | Participants: assistant]\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking\n\nCricut project ideas that could double as MGA products (vinyl labels, custom packaging, gift sets)\n\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": 1.0
+    },
+    {
+      "category": "isolation",
+      "query": "what CVEs did Shale work on in PSIRT",
+      "mode": "specific",
+      "expected": "Zero results from Dean's store (this is Patterson's domain)",
+      "pass_criteria": "No PSIRT/CVE segments returned \u2014 privacy absolute",
+      "results": [
+        {
+          "score": 0.2623,
+          "distance": 0.4535,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "general",
+          "topic": "with, cron, channel",
+          "session_id": "60e4121d-daff-4845-86e3-4f2c952cc0fa",
+          "text": "[Topic flow: cron, with \u2192 config, mention]\nDone. Here's what I did:\n\n1. **Removed** the ARC Email Monitor section from HEARTBEAT.md (left a note pointing to the cron job)\n2. **Created** an isolated cron job that runs every 30 minutes, 8am\u201310pm PST\n\nThe cron job runs in a completely clean session with no prior context. The task prompt explicitly:\n- States Jackie's ID (`U01A6CDETD4`) is the recipient\n- Includes an example message format starting with her tag\n- Has a \"DO NOT use `U0AEYBK97K8`\" guar"
+        },
+        {
+          "score": 0.2341,
+          "distance": 0.4319,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "general",
+          "topic": "building, meal, rotation",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: building, meal, rotation | Participants: assistant]\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nmeals:Building a meal"
+        },
+        {
+          "score": 0.2341,
+          "distance": 0.4321,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "mga-business",
+          "topic": "vinyl",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: vinyl | Participants: assistant]\nCricut project ideas that could double as MGA products (vinyl labels, custom packaging, gift sets)\n\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking"
+        },
+        {
+          "score": 0.231,
+          "distance": 0.4516,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "mga-business",
+          "topic": "jackie, slack, just",
+          "session_id": "9b1d42f9-6706-4e8e-a323-a2ea1879817f",
+          "text": "[Topic: jackie, slack, just | Participants: assistant]\n[Thread history - for context]\n[Slack dean (assistant) Thu 2026-02-26 05:15 PST] Hey <@U0AEYBK97K8>, I just checked your email and there's a new unread ARC response for \"Starving butterfly by F.K.\" in your inbox. Check it out when you have a minute.\n\n\u2014 Dean\n[slack message id: 1772111710.103459 channel: C0AF03A6UDR]\n\nSystem: [2026-02-26 05:23:51 PST] Slack message in #workingsessions-jackie from grimm: <@U0AEYBK97K8> - you don't need to refer"
+        },
+        {
+          "score": 0.2305,
+          "distance": 0.4542,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "cricut-crafting",
+          "topic": "that, what, building",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic flow: what, price \u2192 that, building]\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nBuilding a meal rotation system that works with ADHD br"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": 5.0
+    },
+    {
+      "category": "isolation",
+      "query": "Grimm's TAM customer escalation",
+      "mode": "specific",
+      "expected": "Zero results from Dean's store (this is Bob's domain)",
+      "pass_criteria": "No TAM/customer segments returned \u2014 privacy absolute",
+      "results": [
+        {
+          "score": 0.5556,
+          "distance": 0.44,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "emails, jackie, unread",
+          "session_id": "702e2a1e-8006-4046-946f-a80f5e5f692a",
+          "text": "[Topic: emails, jackie, unread | Participants: assistant]\n[cron:d9086557-0a87-474c-b3d1-c95fcc5adace ARC Email Monitor] Check for new ARC (Advanced Reader Copy) emails for Jackie.\n\nRun this command:\n```\nGOG_KEYRING_PASSWORD=\"gog-local-mac-key\" gog gmail search \"is:unread (ARC OR 'advanced reader copy' OR 'advance reader copy' OR 'street team' OR 'review team')\" --account jscherfpremier@gmail.com --max 5\n```\n\nIf there are NO new unread emails, do nothing \u2014 just finish.\n\nIf there ARE new unread em"
+        },
+        {
+          "score": 0.5555,
+          "distance": 0.4401,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "emails, jackie, unread",
+          "session_id": "a9b4922f-8e32-4d08-8e73-4773a80e9de3",
+          "text": "[Topic: emails, jackie, unread | Participants: assistant]\n[cron:d9086557-0a87-474c-b3d1-c95fcc5adace ARC Email Monitor] Check for new ARC (Advanced Reader Copy) emails for Jackie.\n\nRun this command:\n```\nGOG_KEYRING_PASSWORD=\"gog-local-mac-key\" gog gmail search \"is:unread (ARC OR 'advanced reader copy' OR 'advance reader copy' OR 'street team' OR 'review team')\" --account jscherfpremier@gmail.com --max 5\n```\n\nIf there are NO new unread emails, do nothing \u2014 just finish.\n\nIf there ARE new unread em"
+        },
+        {
+          "score": 0.5555,
+          "distance": 0.4402,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "emails, jackie, unread",
+          "session_id": "99bc0f11-9800-450a-b0cf-31d1e67d4131",
+          "text": "[Topic: emails, jackie, unread | Participants: assistant]\n[cron:d9086557-0a87-474c-b3d1-c95fcc5adace ARC Email Monitor] Check for new ARC (Advanced Reader Copy) emails for Jackie.\n\nRun this command:\n```\nGOG_KEYRING_PASSWORD=\"gog-local-mac-key\" gog gmail search \"is:unread (ARC OR 'advanced reader copy' OR 'advance reader copy' OR 'street team' OR 'review team')\" --account jscherfpremier@gmail.com --max 5\n```\n\nIf there are NO new unread emails, do nothing \u2014 just finish.\n\nIf there ARE new unread em"
+        },
+        {
+          "score": 0.5554,
+          "distance": 0.4403,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "emails, jackie, unread",
+          "session_id": "42d035f2-ad65-47ab-a297-ea58e4f91c05",
+          "text": "[Topic: emails, jackie, unread | Participants: assistant]\n[cron:d9086557-0a87-474c-b3d1-c95fcc5adace ARC Email Monitor] Check for new ARC (Advanced Reader Copy) emails for Jackie.\n\nRun this command:\n```\nGOG_KEYRING_PASSWORD=\"gog-local-mac-key\" gog gmail search \"is:unread (ARC OR 'advanced reader copy' OR 'advance reader copy' OR 'street team' OR 'review team')\" --account jscherfpremier@gmail.com --max 5\n```\n\nIf there are NO new unread emails, do nothing \u2014 just finish.\n\nIf there ARE new unread em"
+        },
+        {
+          "score": 0.5554,
+          "distance": 0.4404,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "general",
+          "topic": "emails, jackie, unread",
+          "session_id": "4d8a4778-aec8-4727-9fc2-d8d765b611be",
+          "text": "[Topic: emails, jackie, unread | Participants: assistant]\n[cron:d9086557-0a87-474c-b3d1-c95fcc5adace ARC Email Monitor] Check for new ARC (Advanced Reader Copy) emails for Jackie.\n\nRun this command:\n```\nGOG_KEYRING_PASSWORD=\"gog-local-mac-key\" gog gmail search \"is:unread (ARC OR 'advanced reader copy' OR 'advance reader copy' OR 'street team' OR 'review team')\" --account jscherfpremier@gmail.com --max 5\n```\n\nIf there are NO new unread emails, do nothing \u2014 just finish.\n\nIf there ARE new unread em"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": 5.0
+    },
+    {
+      "category": "isolation",
+      "query": "NAS infrastructure server configuration",
+      "mode": "specific",
+      "expected": "May return cross-agent coordination segments (shared topic) but NOT Bob's private infra sessions",
+      "pass_criteria": "Only segments from Dean's own sessions about NAS/infra",
+      "results": [
+        {
+          "score": 0.5211,
+          "distance": 0.5353,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "slack, that, session",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Topic: slack, that, session | Participants: assistant]\nBob \u2014 NFS mount is showing up (`df -h` confirms `nas-warehouse:/mnt/tank/public` at `/Volumes/public/`), but any `ls` against it hangs and times out. The mount exists but I can't actually read or write to it. Might be a stale NFS handle or the directory traversal is choking \u2014 `df` returns fine but `ls /Volumes/public/` never comes back.\n\nCould be the NFS service is still settling after the restart, or a cache issue on this end. Want me to t"
+        },
+        {
+          "score": 0.52,
+          "distance": 0.5386,
+          "source": "segment",
+          "date": "2026-03-01",
+          "domain": "cross-agent",
+          "topic": "slack, that, session",
+          "session_id": "41493ccd-deb3-466c-b98e-bd3f5e00b583",
+          "text": "[Topic: slack, that, session | Participants: assistant]\nBob \u2014 mount shows up (`nas-warehouse:/mnt/tank/public on /Volumes/public (nfs)`) but it's completely unresponsive. Every `ls` against it hangs indefinitely and times out. Tried force unmounting to remount cleanly but `umount -f` returns \"Operation not permitted\" and `diskutil unmount force` also hangs.\n\nThis looks like a stale NFS handle \u2014 the mount was probably created before the NFS service was fully running, so the kernel is stuck waitin"
+        },
+        {
+          "score": 0.2472,
+          "distance": 0.5422,
+          "source": "segment",
+          "date": "2026-02-27",
+          "domain": "general",
+          "topic": "with, cron, channel",
+          "session_id": "60e4121d-daff-4845-86e3-4f2c952cc0fa",
+          "text": "[Topic flow: cron, with \u2192 config, mention]\nDone. Here's what I did:\n\n1. **Removed** the ARC Email Monitor section from HEARTBEAT.md (left a note pointing to the cron job)\n2. **Created** an isolated cron job that runs every 30 minutes, 8am\u201310pm PST\n\nThe cron job runs in a completely clean session with no prior context. The task prompt explicitly:\n- States Jackie's ID (`U01A6CDETD4`) is the recipient\n- Includes an example message format starting with her tag\n- Has a \"DO NOT use `U0AEYBK97K8`\" guar"
+        },
+        {
+          "score": 0.2204,
+          "distance": 0.521,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "mga-business",
+          "topic": "vinyl, inventory, management",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic: vinyl, inventory, management | Participants: assistant]\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking\n\nCricut project ideas that could double as MGA products (vinyl labels, custom packaging, gift sets)\n\nVinyl inventory management \u2014 when to stock up, color theory for seasonal projects, supplier price tracking"
+        },
+        {
+          "score": 0.2171,
+          "distance": 0.544,
+          "source": "segment",
+          "date": "2026-02-26",
+          "domain": "cricut-crafting",
+          "topic": "that, what, building",
+          "session_id": "038e1caf-1e87-43a7-8751-0ea6721401a4",
+          "text": "[Topic flow: what, price \u2192 that, building]\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nPrice tracking automation \u2014 what tools exist, what patterns emerge in craft supply pricing\n\nBuilding a meal rotation system that works with ADHD brains \u2014 low decision fatigue, high variety perception\n\nBuilding a meal rotation system that works with ADHD br"
+        }
+      ],
+      "result_count": 5,
+      "auto_score": 5.0
+    }
+  ],
+  "summary": {
+    "specific": {
+      "query_count": 3,
+      "auto_scored": 0,
+      "avg_auto_score": null
+    },
+    "pattern": {
+      "query_count": 3,
+      "auto_scored": 0,
+      "avg_auto_score": null
+    },
+    "blended": {
+      "query_count": 2,
+      "auto_scored": 0,
+      "avg_auto_score": null
+    },
+    "negative": {
+      "query_count": 3,
+      "auto_scored": 3,
+      "avg_auto_score": 1.0
+    },
+    "isolation": {
+      "query_count": 3,
+      "auto_scored": 3,
+      "avg_auto_score": 5.0
+    }
+  }
+}

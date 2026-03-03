@@ -1,0 +1,372 @@
+{
+  "_description": "Domain taxonomy for semantic memory tagging. Used by chunker and summarizer to classify session segments.",
+  "_version": "1.0",
+  "agents": {
+    "dean": {
+      "user": "Jackie",
+      "domains": {
+        "caroline-school": {
+          "description": "School events, class projects, teacher communications",
+          "keywords": [
+            "school",
+            "teacher",
+            "class",
+            "homework",
+            "science fair",
+            "grades",
+            "conference",
+            "report card",
+            "field trip"
+          ]
+        },
+        "caroline-activities": {
+          "description": "Extracurriculars, playdates, birthday parties",
+          "keywords": [
+            "practice",
+            "game",
+            "recital",
+            "playdate",
+            "birthday",
+            "party",
+            "activity",
+            "soccer",
+            "dance"
+          ]
+        },
+        "mga-business": {
+          "description": "Midnight Garden Apothecary operations",
+          "keywords": [
+            "mga",
+            "apothecary",
+            "herbal",
+            "product",
+            "label",
+            "inventory",
+            "restock",
+            "market",
+            "fair"
+          ]
+        },
+        "rec-business": {
+          "description": "Raven's Eye Consulting operations",
+          "keywords": [
+            "rec",
+            "consulting",
+            "client",
+            "invoice",
+            "appointment"
+          ]
+        },
+        "meal-planning": {
+          "description": "Grocery, recipes, food logistics",
+          "keywords": [
+            "dinner",
+            "recipe",
+            "grocery",
+            "meal",
+            "cooking",
+            "food",
+            "ingredients",
+            "crock pot",
+            "leftovers"
+          ]
+        },
+        "cricut-crafting": {
+          "description": "Vinyl cutting, labels, creative projects",
+          "keywords": [
+            "cricut",
+            "vinyl",
+            "cut",
+            "design",
+            "label",
+            "htv",
+            "adhesive",
+            "design space",
+            "craft"
+          ]
+        },
+        "books-reading": {
+          "description": "Book discussions, recommendations, reading log",
+          "keywords": [
+            "book",
+            "read",
+            "author",
+            "romance",
+            "novel",
+            "series",
+            "trope",
+            "enemies-to-lovers",
+            "grumpy"
+          ]
+        },
+        "household-logistics": {
+          "description": "General life management, scheduling, errands",
+          "keywords": [
+            "schedule",
+            "appointment",
+            "errand",
+            "house",
+            "clean",
+            "organize",
+            "calendar"
+          ]
+        },
+        "gift-bags": {
+          "description": "Holiday gift bag pipeline",
+          "keywords": [
+            "gift bag",
+            "valentine",
+            "halloween",
+            "christmas",
+            "class list",
+            "allergy",
+            "treat",
+            "holiday"
+          ]
+        },
+        "deals-shopping": {
+          "description": "Bargain hunting, price comparisons, purchases",
+          "keywords": [
+            "deal",
+            "sale",
+            "coupon",
+            "price",
+            "amazon",
+            "bulk",
+            "discount",
+            "bargain",
+            "cart"
+          ]
+        },
+        "medical-health": {
+          "description": "Health-related discussions (VAULT sensitivity)",
+          "keywords": [
+            "doctor",
+            "appointment",
+            "medication",
+            "health",
+            "sick",
+            "fever",
+            "medical"
+          ],
+          "sensitivity": "vault"
+        },
+        "adhd-support": {
+          "description": "Executive function support, overwhelm management",
+          "keywords": [
+            "overwhelm",
+            "focus",
+            "distracted",
+            "too much",
+            "can't start",
+            "spiral",
+            "prioritize"
+          ]
+        },
+        "cross-agent": {
+          "description": "Coordination with Patterson/Bob",
+          "keywords": [
+            "patterson",
+            "bob",
+            "cross-agent",
+            "coordination",
+            "shared"
+          ]
+        }
+      }
+    },
+    "bob": {
+      "user": "Grimm",
+      "domains": {
+        "red-hat-tam": {
+          "description": "TAM work, customer cases",
+          "keywords": [
+            "tam",
+            "customer",
+            "case",
+            "red hat",
+            "support",
+            "escalation",
+            "sbt",
+            "sla",
+            "openshift",
+            "rhel",
+            "ansible",
+            "portal",
+            "ticket",
+            "sbr",
+            "severity",
+            "premium",
+            "subscription",
+            "supportshell",
+            "kcs",
+            "bugzilla",
+            "jira",
+            "errata",
+            "backport",
+            "bny",
+            "cibc",
+            "symcor",
+            "citi",
+            "tbr",
+            "ocp",
+            "container",
+            "kubernetes",
+            "cluster",
+            "node",
+            "sosreport",
+            "must-gather",
+            "insights"
+          ]
+        },
+        "infrastructure": {
+          "description": "Home lab, networking, server management",
+          "keywords": [
+            "server",
+            "nas",
+            "network",
+            "docker",
+            "ssh",
+            "firewall",
+            "truenas",
+            "homelab"
+          ]
+        },
+        "mga-rec-business": {
+          "description": "Shared business tasks",
+          "keywords": [
+            "mga",
+            "rec",
+            "business",
+            "inventory",
+            "operations"
+          ]
+        },
+        "coding": {
+          "description": "Development projects",
+          "keywords": [
+            "code",
+            "python",
+            "git",
+            "repo",
+            "function",
+            "debug",
+            "test",
+            "api"
+          ]
+        },
+        "cross-agent": {
+          "description": "Coordination with Patterson/Dean",
+          "keywords": [
+            "patterson",
+            "dean",
+            "cross-agent",
+            "coordination",
+            "shared"
+          ]
+        }
+      }
+    },
+    "patterson": {
+      "user": "Shale",
+      "domains": {
+        "red-hat-psirt": {
+          "description": "PSIRT work, security",
+          "keywords": [
+            "psirt",
+            "cve",
+            "vulnerability",
+            "security",
+            "advisory",
+            "patch"
+          ]
+        },
+        "personal": {
+          "description": "Shale's personal tasks",
+          "keywords": [
+            "personal",
+            "appointment",
+            "schedule"
+          ]
+        },
+        "mga-rec-business": {
+          "description": "Shared business tasks",
+          "keywords": [
+            "mga",
+            "rec",
+            "business",
+            "apothecary",
+            "consulting"
+          ]
+        },
+        "infrastructure": {
+          "description": "TELOS, home systems",
+          "keywords": [
+            "telos",
+            "server",
+            "network",
+            "automation",
+            "homelab"
+          ]
+        },
+        "cross-agent": {
+          "description": "Coordination with Bob/Dean",
+          "keywords": [
+            "bob",
+            "dean",
+            "cross-agent",
+            "coordination",
+            "shared"
+          ]
+        }
+      }
+    }
+  },
+  "shared": {
+    "household": {
+      "description": "Affects the whole household",
+      "keywords": [
+        "household",
+        "family",
+        "everyone",
+        "home"
+      ]
+    },
+    "mga-business": {
+      "description": "MGA operations (shared context)",
+      "keywords": [
+        "mga",
+        "midnight garden",
+        "apothecary"
+      ]
+    },
+    "rec-business": {
+      "description": "REC operations (shared context)",
+      "keywords": [
+        "rec",
+        "raven's eye",
+        "consulting"
+      ]
+    }
+  },
+  "chunker_defaults": {
+    "bob": {
+      "mode": "topic",
+      "min_segment_messages": 2,
+      "window_size_messages": 8,
+      "window_overlap_messages": 2
+    },
+    "patterson": {
+      "mode": "topic",
+      "min_segment_messages": 2,
+      "window_size_messages": 8,
+      "window_overlap_messages": 2
+    },
+    "dean": {
+      "mode": "sliding",
+      "min_segment_messages": 2,
+      "window_size_messages": 6,
+      "window_overlap_messages": 2
+    }
+  }
+}
