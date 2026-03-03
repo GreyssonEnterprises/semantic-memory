@@ -26,19 +26,19 @@
         msg: "OpenClaw config not found at {{ openclaw_home }}/.openclaw/openclaw.json"
       when: not config_stat.stat.exists
 
-    - name: Ensure json5 Python package is available
+    - name: Ensure json5 Python package is available (uv)
+      command: uv pip install json5 --system
+      register: uv_result
+      changed_when: "'Installed' in uv_result.stdout"
+      ignore_errors: true
+
+    - name: Fallback — install json5 via pip
       pip:
         name: json5
         state: present
         extra_args: "--break-system-packages"
       become: false
-      ignore_errors: true
-      register: pip_result
-
-    - name: Fallback — install json5 via uv
-      command: uv pip install json5 --system
-      when: pip_result is failed
-      changed_when: true
+      when: uv_result is failed
 
     - name: Read current memorySearch.provider
       command: >
