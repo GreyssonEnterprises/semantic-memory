@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+data/vectors/
+data/sessions/
+mcp-token.txt
+config/tokens.json
+data/exported/
+data/vectors-backup/
+test
+workspaces/
+mcp-server/
+scripts/cron_dummy.txt
+scripts/semantic-ingest.sh
+data/eval/results/
+data/logs/
+ansible/inventory.yml
+.pytest_cache/

@@ -1,0 +1,29 @@
+---
+# OpenClaw host inventory — example
+# Copy to inventory.yml and fill in your real values.
+# inventory.yml is gitignored.
+
+all:
+  vars:
+    ollama_url: "http://localhost:11434"
+    embed_model: "nomic-embed-text"
+    ansible_python_interpreter: auto_silent
+
+  hosts:
+    host-1:
+      ansible_host: 192.168.x.x
+      ansible_user: youruser
+      openclaw_home: "/home/youruser"
+      pai_name: agent-1
+
+    host-2:
+      ansible_host: 192.168.x.x
+      ansible_user: youruser
+      openclaw_home: "/home/youruser"
+      pai_name: agent-2
+
+    host-3:
+      ansible_host: 192.168.x.x
+      ansible_user: youruser
+      openclaw_home: "/home/youruser"
+      pai_name: agent-3

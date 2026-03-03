@@ -1,0 +1,353 @@
+{
+  "_description": "Domain taxonomy for semantic memory tagging. Used by chunker and summarizer to classify session segments.",
+  "_version": "1.0",
+  "agents": {
+    "dean": {
+      "user": "user-1",
+      "domains": {
+        "child-school": {
+          "description": "School events, class projects, teacher communications",
+          "keywords": [
+            "school",
+            "teacher",
+            "class",
+            "homework",
+            "science fair",
+            "grades",
+            "conference",
+            "report card",
+            "field trip"
+          ]
+        },
+        "child-activities": {
+          "description": "Extracurriculars, playdates, birthday parties",
+          "keywords": [
+            "practice",
+            "game",
+            "recital",
+            "playdate",
+            "birthday",
+            "party",
+            "activity",
+            "soccer",
+            "dance"
+          ]
+        },
+        "ecommerce-business": {
+          "description": "Ecommerce product operations",
+          "keywords": [
+            "shop",
+            "store",
+            "herbal",
+            "product",
+            "label",
+            "inventory",
+            "restock",
+            "market",
+            "fair"
+          ]
+        },
+        "consulting-business": {
+          "description": "Consulting operations",
+          "keywords": [
+            "consulting",
+            "client",
+            "invoice",
+            "appointment"
+          ]
+        },
+        "meal-planning": {
+          "description": "Grocery, recipes, food logistics",
+          "keywords": [
+            "dinner",
+            "recipe",
+            "grocery",
+            "meal",
+            "cooking",
+            "food",
+            "ingredients",
+            "crock pot",
+            "leftovers"
+          ]
+        },
+        "cricut-crafting": {
+          "description": "Vinyl cutting, labels, creative projects",
+          "keywords": [
+            "cricut",
+            "vinyl",
+            "cut",
+            "design",
+            "label",
+            "htv",
+            "adhesive",
+            "design space",
+            "craft"
+          ]
+        },
+        "books-reading": {
+          "description": "Book discussions, recommendations, reading log",
+          "keywords": [
+            "book",
+            "read",
+            "author",
+            "romance",
+            "novel",
+            "series",
+            "trope",
+            "enemies-to-lovers",
+            "grumpy"
+          ]
+        },
+        "household-logistics": {
+          "description": "General life management, scheduling, errands",
+          "keywords": [
+            "schedule",
+            "appointment",
+            "errand",
+            "house",
+            "clean",
+            "organize",
+            "calendar"
+          ]
+        },
+        "gift-bags": {
+          "description": "Holiday gift bag pipeline",
+          "keywords": [
+            "gift bag",
+            "valentine",
+            "halloween",
+            "christmas",
+            "class list",
+            "allergy",
+            "treat",
+            "holiday"
+          ]
+        },
+        "deals-shopping": {
+          "description": "Bargain hunting, price comparisons, purchases",
+          "keywords": [
+            "deal",
+            "sale",
+            "coupon",
+            "price",
+            "amazon",
+            "bulk",
+            "discount",
+            "bargain",
+            "cart"
+          ]
+        },
+        "medical-health": {
+          "description": "Health-related discussions (VAULT sensitivity)",
+          "keywords": [
+            "doctor",
+            "appointment",
+            "medication",
+            "health",
+            "sick",
+            "fever",
+            "medical"
+          ],
+          "sensitivity": "vault"
+        },
+        "adhd-support": {
+          "description": "Executive function support, overwhelm management",
+          "keywords": [
+            "overwhelm",
+            "focus",
+            "distracted",
+            "too much",
+            "can't start",
+            "spiral",
+            "prioritize"
+          ]
+        },
+        "cross-agent": {
+          "description": "Coordination with other agents",
+          "keywords": [
+            "cross-agent",
+            "coordination",
+            "shared"
+          ]
+        }
+      }
+    },
+    "bob": {
+      "user": "user-2",
+      "domains": {
+        "red-hat-tam": {
+          "description": "TAM work, customer cases",
+          "keywords": [
+            "tam",
+            "customer",
+            "case",
+            "red hat",
+            "support",
+            "escalation",
+            "sbt",
+            "sla",
+            "openshift",
+            "rhel",
+            "ansible",
+            "portal",
+            "ticket",
+            "sbr",
+            "severity",
+            "premium",
+            "subscription",
+            "supportshell",
+            "kcs",
+            "bugzilla",
+            "jira",
+            "errata",
+            "backport",
+            "ocp",
+            "container",
+            "kubernetes",
+            "cluster",
+            "node",
+            "sosreport",
+            "must-gather",
+            "insights"
+          ]
+        },
+        "infrastructure": {
+          "description": "Home lab, networking, server management",
+          "keywords": [
+            "server",
+            "nas",
+            "network",
+            "docker",
+            "ssh",
+            "firewall",
+            "truenas",
+            "homelab"
+          ]
+        },
+        "business": {
+          "description": "Shared business tasks",
+          "keywords": [
+            "business",
+            "inventory",
+            "operations"
+          ]
+        },
+        "coding": {
+          "description": "Development projects",
+          "keywords": [
+            "code",
+            "python",
+            "git",
+            "repo",
+            "function",
+            "debug",
+            "test",
+            "api"
+          ]
+        },
+        "cross-agent": {
+          "description": "Coordination with other agents",
+          "keywords": [
+            "cross-agent",
+            "coordination",
+            "shared"
+          ]
+        }
+      }
+    },
+    "patterson": {
+      "user": "user-3",
+      "domains": {
+        "red-hat-psirt": {
+          "description": "PSIRT work, security",
+          "keywords": [
+            "psirt",
+            "cve",
+            "vulnerability",
+            "security",
+            "advisory",
+            "patch"
+          ]
+        },
+        "personal": {
+          "description": "Personal tasks",
+          "keywords": [
+            "personal",
+            "appointment",
+            "schedule"
+          ]
+        },
+        "business": {
+          "description": "Shared business tasks",
+          "keywords": [
+            "business",
+            "consulting"
+          ]
+        },
+        "infrastructure": {
+          "description": "Home systems",
+          "keywords": [
+            "server",
+            "network",
+            "automation",
+            "homelab"
+          ]
+        },
+        "cross-agent": {
+          "description": "Coordination with other agents",
+          "keywords": [
+            "cross-agent",
+            "coordination",
+            "shared"
+          ]
+        }
+      }
+    }
+  },
+  "shared": {
+    "household": {
+      "description": "Affects the whole household",
+      "keywords": [
+        "household",
+        "family",
+        "everyone",
+        "home"
+      ]
+    },
+    "ecommerce-business": {
+      "description": "Ecommerce operations (shared context)",
+      "keywords": [
+        "shop",
+        "store",
+        "ecommerce"
+      ]
+    },
+    "consulting-business": {
+      "description": "Consulting operations (shared context)",
+      "keywords": [
+        "consulting",
+        "client"
+      ]
+    }
+  },
+  "chunker_defaults": {
+    "bob": {
+      "mode": "topic",
+      "min_segment_messages": 2,
+      "window_size_messages": 8,
+      "window_overlap_messages": 2
+    },
+    "patterson": {
+      "mode": "topic",
+      "min_segment_messages": 2,
+      "window_size_messages": 8,
+      "window_overlap_messages": 2
+    },
+    "dean": {
+      "mode": "sliding",
+      "min_segment_messages": 2,
+      "window_size_messages": 6,
+      "window_overlap_messages": 2
+    }
+  }
+}

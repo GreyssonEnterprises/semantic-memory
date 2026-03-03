@@ -1,0 +1,11 @@
+[project]
+name = "semantic-memory"
+version = "0.1.0"
+description = "Cross-agent semantic memory with cognitive scoring (ACT-R, Bayesian, Hebbian)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.5.2",
+    "mcp[cli]>=1.0.0",
+    "requests>=2.32.5",
+]

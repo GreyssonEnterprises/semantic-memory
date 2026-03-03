@@ -1,0 +1,17 @@
+# Desired memorySearch config state.
+# This is the source of truth — the playbook patches each host's
+# openclaw.json to match these values.
+
+memory_search:
+  provider: "ollama"
+  enabled: true
+  sources:
+    - memory
+    - sessions
+  experimental:
+    sessionMemory: true
+  model: "nomic-embed-text"
+
+# Keys to REMOVE from the existing config (obsolete shim config)
+memory_search_remove_keys:
+  - remote   # was: remote.baseUrl pointed at Ollama via OpenAI-compat shim
