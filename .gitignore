@@ -12,3 +12,10 @@ data/vectors/
 data/sessions/
 mcp-token.txt
 config/tokens.json
+data/exported/
+data/vectors-backup/
+test
+workspaces/
+mcp-server/
+scripts/cron_dummy.txt
+scripts/semantic-ingest.sh
