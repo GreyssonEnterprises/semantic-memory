@@ -1,0 +1,31 @@
+{
+  "name": "greysson-memory",
+  "version": "1.0.0",
+  "description": "Unified memory layer plugin for OpenClaw — semantic search (ChromaDB/Ollama) + topic crystallization, complementing LCM conversation compaction.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prebuild": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "license": "MIT",
+  "author": "Grimm Greysson <grimm@greysson.com>"
+}

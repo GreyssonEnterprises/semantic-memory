@@ -1,0 +1,68 @@
+{
+  "id": "greysson-memory",
+  "name": "Greysson Memory",
+  "version": "1.0.0",
+  "description": "Unified memory layer plugin — semantic search (ChromaDB) + topic crystallization, complementing LCM's conversation compaction.",
+  "entry": "./dist/index.js",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": true,
+        "description": "Enable/disable all memory injection"
+      },
+      "topicsDir": {
+        "type": "string",
+        "default": "memory/topics",
+        "description": "Workspace-relative path to topic documents"
+      },
+      "chromaDbPath": {
+        "type": "string",
+        "default": "semantic-memory/vectors",
+        "description": "Path to ChromaDB vector store directory"
+      },
+      "ollamaBaseUrl": {
+        "type": "string",
+        "default": "http://localhost:11434",
+        "description": "Base URL for Ollama embedding API"
+      },
+      "embeddingModel": {
+        "type": "string",
+        "default": "nomic-embed-text",
+        "description": "Ollama model for embeddings"
+      },
+      "maxTopicDocs": {
+        "type": "number",
+        "default": 3,
+        "description": "Maximum topic documents to inject per turn"
+      },
+      "maxMemoryResults": {
+        "type": "number",
+        "default": 5,
+        "description": "Maximum semantic memory results to inject"
+      },
+      "minMemoryScore": {
+        "type": "number",
+        "default": 0.5,
+        "description": "Minimum similarity score for memory results (0-1, higher = more similar)"
+      },
+      "maxPrependChars": {
+        "type": "number",
+        "default": 2000,
+        "description": "Maximum characters for prepended context"
+      },
+      "crystallizationReminder": {
+        "type": "boolean",
+        "default": true,
+        "description": "Append crystallization checkpoint reminder to system context"
+      },
+      "skipTriggers": {
+        "type": "array",
+        "items": { "type": "string" },
+        "default": ["cron"],
+        "description": "Triggers that should skip memory injection entirely"
+      }
+    }
+  }
+}
