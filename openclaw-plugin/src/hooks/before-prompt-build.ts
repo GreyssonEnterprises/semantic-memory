@@ -21,9 +21,16 @@ async function runIncrementalIngest(agentId: string, logger: Logger): Promise<vo
   try {
     const { execFile } = await import("node:child_process");
     const { promisify } = await import("node:util");
+    const { existsSync } = await import("node:fs");
     const execFileAsync = promisify(execFile);
 
-    const sessionDir = `/root/.openclaw/agents/${agentId}/sessions`;
+    const home = process.env.HOME || "/home/openclaw";
+    const sessionDir = `${home}/.openclaw/agents/${agentId}/sessions`;
+
+    // Use writable copy on state PVC if available (OCP), else image path (LXC)
+    const smWritable = `${home}/.openclaw/semantic-memory`;
+    const smDir = existsSync(`${smWritable}/.venv`) ? smWritable : "/opt/semantic-memory";
+
     const { stdout, stderr } = await execFileAsync(
       "uv",
       [
@@ -34,14 +41,21 @@ async function runIncrementalIngest(agentId: string, logger: Logger): Promise<vo
         "--min-messages", "4",
       ],
       {
-        cwd: "/opt/semantic-memory",
+        cwd: smDir,
         timeout: 60_000,
         env: {
           ...process.env,
-          PATH: `/root/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ""}`,
+          PATH: `${home}/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ""}`,
           SEMANTIC_MEMORY_STORE:
             process.env.SEMANTIC_MEMORY_STORE ||
             "/data/greysson-memory/semantic-memory/vectors",
+          EMBEDDING_PROVIDER: process.env.EMBEDDING_PROVIDER || "openai",
+          OPENAI_API_KEY:
+            process.env.OPENAI_API_KEY ||
+            process.env.OPENAI_API_KEY_EMBEDDINGS || "",
+          UV_PYTHON_INSTALL_DIR:
+            process.env.UV_PYTHON_INSTALL_DIR ||
+            `${home}/.local/share/uv/python`,
         },
       }
     );

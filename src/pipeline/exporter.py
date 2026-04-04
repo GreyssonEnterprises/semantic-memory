@@ -1,12 +1,37 @@
 """Session exporter — reads OpenClaw JSONL sessions and extracts clean conversation text."""
 
 import json
+import os
 from pathlib import Path
 from typing import Optional
 from datetime import datetime
 
-# OpenClaw session storage path
-SESSION_DIR = Path.home() / ".openclaw" / "agents" / "main" / "sessions"
+# OpenClaw session storage path — configurable via env var.
+# Falls back to scanning all agent session dirs if SEMANTIC_SESSION_DIR is not set.
+_SESSION_DIR_ENV = os.environ.get("SEMANTIC_SESSION_DIR")
+
+
+def _get_session_dirs() -> list[Path]:
+    """Return session directories to scan.
+
+    Priority:
+      1. SEMANTIC_SESSION_DIR env var (single explicit path)
+      2. All agent session dirs: ~/.openclaw/agents/*/sessions/
+    """
+    if _SESSION_DIR_ENV:
+        p = Path(_SESSION_DIR_ENV)
+        return [p] if p.is_dir() else []
+
+    agents_root = Path.home() / ".openclaw" / "agents"
+    if not agents_root.is_dir():
+        return []
+    return sorted(
+        [d / "sessions" for d in agents_root.iterdir() if (d / "sessions").is_dir()]
+    )
+
+
+# Keep a single-dir alias for backward compatibility within the module
+SESSION_DIR = Path(_SESSION_DIR_ENV) if _SESSION_DIR_ENV else Path.home() / ".openclaw" / "agents" / "main" / "sessions"
 
 # Message types/roles to skip during cleaning
 SKIP_ROLES = {"toolResult", "tool_result"}
@@ -20,44 +45,47 @@ NOISE_PATTERNS = [
 
 def list_sessions(limit: int = 30, min_messages: int = 4) -> list[dict]:
     """List available sessions sorted by date (newest first).
-    
+
     Returns list of {session_id, date, path, message_count}.
     Skips deleted sessions and tiny ones (< min_messages).
+    Scans all agent session directories unless SEMANTIC_SESSION_DIR is set.
     """
     sessions = []
-    for f in SESSION_DIR.glob("*.jsonl"):
-        if ".deleted." in f.name:
-            continue
-        if "probe-" in f.name:
-            continue
+    session_dirs = _get_session_dirs()
+    for session_dir in session_dirs:
+        for f in session_dir.glob("*.jsonl"):
+            if ".deleted." in f.name:
+                continue
+            if "probe-" in f.name:
+                continue
 
-        # Quick scan: count messages and get date
-        msg_count = 0
-        session_date = None
-        session_id = None
-        try:
-            with open(f, errors="replace") as fp:
-                for line in fp:
-                    d = json.loads(line.strip())
-                    if d.get("type") == "session":
-                        session_id = d.get("id", f.stem)
-                        ts = d.get("timestamp", "")
-                        if ts:
-                            session_date = ts[:10]  # YYYY-MM-DD
-                    elif d.get("type") == "message":
-                        msg = d.get("message", {})
-                        if msg.get("role") in ("user", "assistant"):
-                            msg_count += 1
-        except (json.JSONDecodeError, IOError):
-            continue
+            # Quick scan: count messages and get date
+            msg_count = 0
+            session_date = None
+            session_id = None
+            try:
+                with open(f, errors="replace") as fp:
+                    for line in fp:
+                        d = json.loads(line.strip())
+                        if d.get("type") == "session":
+                            session_id = d.get("id", f.stem)
+                            ts = d.get("timestamp", "")
+                            if ts:
+                                session_date = ts[:10]  # YYYY-MM-DD
+                        elif d.get("type") == "message":
+                            msg = d.get("message", {})
+                            if msg.get("role") in ("user", "assistant"):
+                                msg_count += 1
+            except (json.JSONDecodeError, IOError):
+                continue
 
-        if msg_count >= min_messages:
-            sessions.append({
-                "session_id": session_id or f.stem,
-                "date": session_date or "unknown",
-                "path": str(f),
-                "message_count": msg_count,
-            })
+            if msg_count >= min_messages:
+                sessions.append({
+                    "session_id": session_id or f.stem,
+                    "date": session_date or "unknown",
+                    "path": str(f),
+                    "message_count": msg_count,
+                })
 
     sessions.sort(key=lambda s: s["date"], reverse=True)
     return sessions[:limit]

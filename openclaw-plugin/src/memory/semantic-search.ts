@@ -63,6 +63,7 @@ async function queryViaPaiRecall(
       "--agent", agentId,
     ];
 
+    const home = process.env.HOME || "/home/openclaw";
     const { stdout } = await execFileAsync("pai-memory-recall", args, {
       timeout: 10_000,
       env: {
@@ -71,8 +72,15 @@ async function queryViaPaiRecall(
         SEMANTIC_MEMORY_STORE:
           process.env.SEMANTIC_MEMORY_STORE ||
           "/data/greysson-memory/semantic-memory/vectors",
+        EMBEDDING_PROVIDER: process.env.EMBEDDING_PROVIDER || "openai",
+        OPENAI_API_KEY:
+          process.env.OPENAI_API_KEY ||
+          process.env.OPENAI_API_KEY_EMBEDDINGS || "",
+        UV_PYTHON_INSTALL_DIR:
+          process.env.UV_PYTHON_INSTALL_DIR ||
+          `${home}/.local/share/uv/python`,
         SEMANTIC_MEMORY_AGENT: agentId,
-        PATH: `/root/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ""}`,
+        PATH: `${home}/.local/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ""}`,
       },
     });
 

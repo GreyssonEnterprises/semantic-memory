@@ -10,11 +10,13 @@ set -euo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 export SEMANTIC_MEMORY_STORE="${SEMANTIC_MEMORY_STORE:-$PROJECT_DIR/data/vectors}"
+export EMBEDDING_PROVIDER="${EMBEDDING_PROVIDER:-openai}"
+export OPENAI_API_KEY="${OPENAI_API_KEY:-${OPENAI_API_KEY_EMBEDDINGS:-}}"
+export UV_PYTHON_INSTALL_DIR="${UV_PYTHON_INSTALL_DIR:-$HOME/.local/share/uv/python}"
 
 cd "$PROJECT_DIR"
 
 # Set agent via env var, or default to bob.
-# Map your hostname to an agent in your deployment config.
 AGENT="${SEMANTIC_MEMORY_AGENT:-bob}"
 
 LOG_FILE="data/logs/ingest-$(date +%Y-%m-%d).log"
@@ -28,7 +30,7 @@ log "=== Incremental ingest starting for $AGENT ==="
 # The ingest script skips already-embedded sessions (checks by session_id in Chroma)
 
 log "Ingesting $AGENT sessions..."
-SESSION_DIR="$HOME/.openclaw/agents/main/sessions"
+SESSION_DIR="${SEMANTIC_SESSION_DIR:-$HOME/.openclaw/agents/$AGENT/sessions}"
 if [ ! -d "$SESSION_DIR" ]; then
     log "WARNING: Session directory not found at $SESSION_DIR"
 else
@@ -41,8 +43,8 @@ fi
 
 # Step 2: Backup to NAS (only typically mounted on the primary machine)
 if [ "$AGENT" = "bob" ]; then
-    NAS_BACKUP="/Volumes/owc-express/gdrive-personal/areas/office-org/infrastructure/semantic-memory/data/vectors-backup"
-    if [ -d "/Volumes/owc-express/" ]; then
+    NAS_BACKUP="${SEMANTIC_MEMORY_BACKUP:-/Volumes/owc-express/gdrive-personal/areas/office-org/infrastructure/semantic-memory/data/vectors-backup}"
+    if [ -d "$(dirname "$NAS_BACKUP")" ]; then
       log "Backing up stores to NAS..."
       mkdir -p "$NAS_BACKUP"
       rsync -az --no-group --no-owner data/vectors/ "$NAS_BACKUP/" 2>>"$LOG_FILE" \
